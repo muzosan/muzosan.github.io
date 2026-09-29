@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Volea · Gizlilik Politikası / Privacy Policy</title>
+<meta name="description" content="Volea: Futbol Bilgi Arenası gizlilik politikası · Privacy policy">
+<style>
+  :root {
+    --bg: #060A12; --bg-top: #0F1B36; --surface: #111A2C; --border: #27334F;
+    --gold: #F5C451; --green: #2EE59D; --text: #F2F6FC; --muted: #95A3BA;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--bg); }
+  body {
+    margin: 0; color: var(--text); line-height: 1.7;
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg) 60%);
+    min-height: 100vh;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 48px 22px 64px; }
+  header { text-align: center; margin-bottom: 28px; }
+  .studio { color: var(--gold); letter-spacing: .35em; font-size: 12px; font-weight: 800; }
+  h1 {
+    margin: 10px 0 4px; font-size: 44px; letter-spacing: .12em; font-weight: 900;
+    background: linear-gradient(180deg, #FFF1C1, var(--gold) 55%, #C48A22);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .sub { color: var(--muted); font-weight: 700; letter-spacing: .08em; font-size: 13px; }
+  .langs { display: flex; gap: 8px; justify-content: center; margin: 22px 0 8px; }
+  .langs button {
+    background: var(--surface); color: var(--text); border: 1px solid var(--border);
+    padding: 8px 16px; border-radius: 999px; font-weight: 800; cursor: pointer; font-size: 14px;
+  }
+  .langs button.on { border-color: var(--green); color: var(--green); }
+  .card {
+    background: linear-gradient(180deg, #17223D, #0E1626);
+    border: 1px solid rgba(255,255,255,.07); border-radius: 18px;
+    padding: 26px 24px; box-shadow: 0 18px 40px rgba(0,0,0,.45);
+  }
+  h2 { font-size: 18px; margin: 26px 0 6px; color: var(--gold); }
+  h2:first-child { margin-top: 0; }
+  p, li { color: #D8E0EC; }
+  ul { padding-left: 20px; margin: 6px 0; }
+  a { color: var(--green); }
+  .date { color: var(--muted); font-size: 13px; margin-top: 0; }
+  .note { background: rgba(245,196,81,.08); border: 1px solid rgba(245,196,81,.35); border-radius: 12px; padding: 12px 14px; }
+  table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { color: var(--gold); font-weight: 800; }
+  .scroll { overflow-x: auto; }
+  footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 28px; }
+  /* Varsayılan: Türkçe görünür (JavaScript çalışmasa bile sayfa boş kalmaz) */
+  [data-lang="en"] { display: none; }
+  body.en [data-lang="tr"] { display: none; }
+  body.en [data-lang="en"] { display: block; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="studio">MUON STUDIO</div>
+    <h1>VOLEA</h1>
+    <div class="sub" data-lang="tr">FUTBOL BİLGİ ARENASI · GİZLİLİK POLİTİKASI</div>
+    <div class="sub" data-lang="en">FOOTBALL KNOWLEDGE ARENA · PRIVACY POLICY</div>
+    <div class="langs">
+      <button id="btn-tr" class="on" onclick="setLang('tr')">Türkçe</button>
+      <button id="btn-en" onclick="setLang('en')">English</button>
+    </div>
+  </header>
+
+  <!-- ============================ TÜRKÇE ============================ -->
+  <main class="card" data-lang="tr">
+    <p class="date">Son güncelleme: 30 Eylül 2026</p>
+    <p>Bu gizlilik politikası, MUON Studio ("biz") tarafından geliştirilen <strong>Volea: Futbol Bilgi Arenası</strong> ("Uygulama") mobil oyununu kullanırken hangi bilgilerin toplandığını, nasıl kullanıldığını ve haklarınızı açıklar.</p>
+
+    <h2>Özet</h2>
+    <ul>
+      <li>Oynamak için e-posta, telefon numarası veya gerçek isim gerekmez.</li>
+      <li>Uygulama, <strong>Google AdMob</strong> aracılığıyla reklam gösterir; bu kapsamda reklam kimliği gibi cihaz bilgileri Google tarafından işlenir.</li>
+      <li><strong>Çevrimiçi mod</strong>, maçları yürütmek için anonim bir kullanıcı kimliği ve oyun verilerini Google Firebase sunucularında saklar.</li>
+      <li>Verilerinizi <strong>satmayız</strong>.</li>
+    </ul>
+
+    <h2>Toplanan bilgiler ve kullanım amaçları</h2>
+    <div class="scroll"><table>
+      <tr><th>Bilgi</th><th>Neden</th><th>Nerede</th></tr>
+      <tr><td>Dil tercihi, tek kişilik mod rekorları</td><td>Oyun deneyimi</td><td>Yalnızca cihazınızda</td></tr>
+      <tr><td>Reklam kimliği, IP adresi, cihaz ve uygulama bilgileri, reklam etkileşimleri</td><td>Reklam göstermek, reklam performansını ölçmek, sahtekârlığı önlemek; izin verdiyseniz kişiselleştirilmiş reklam</td><td>Google AdMob</td></tr>
+      <tr><td>Anonim kullanıcı kimliği</td><td>Çevrimiçi maçlarda sizi tanımlamak</td><td>Google Firebase</td></tr>
+      <tr><td>Oyun takma adı (belirlerseniz), maç hamleleri, skorlar, sıralama, gönderilen emojiler</td><td>Çevrimiçi maçları yürütmek, hileyi önlemek, liderlik tablosu</td><td>Google Firebase</td></tr>
+      <tr><td>Satın alma bilgileri (sipariş numarası, ürün, satın alma durumu)</td><td>Uygulama içi satın alımları teslim etmek ve doğrulamak</td><td>Google Play</td></tr>
+      <tr><td>E-posta adresiniz ve mesajınız (yalnızca "Hatalı veri bildir" ile e-posta gönderirseniz)</td><td>Bildirilen hatayı düzeltmek ve size yanıt vermek</td><td>E-posta kutumuz</td></tr>
+    </table></div>
+    <p>Ödeme ve kart bilgileriniz <strong>Google Play tarafından</strong> işlenir; bu bilgiler bize hiçbir zaman ulaşmaz.</p>
+
+    <h2>Reklamlar (Google AdMob)</h2>
+    <p>Uygulama, Google LLC'nin reklam hizmeti AdMob'u kullanır. AdMob; reklam kimliğinizi, IP adresinizi ve cihazınız hakkındaki teknik bilgileri reklam göstermek ve ölçmek için kullanabilir. Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre'deki kullanıcılardan kişiselleştirilmiş reklamlar için uygulama içinde <strong>açık izin</strong> istenir; izin vermezseniz kişiselleştirilmemiş reklamlar gösterilir. Google'ın bu verileri nasıl kullandığını <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">buradan</a> inceleyebilirsiniz.</p>
+    <p>Reklam kimliğinizi dilediğiniz zaman cihaz ayarlarından sıfırlayabilir veya silebilirsiniz (Android: <em>Ayarlar → Google → Reklamlar</em>; iOS: <em>Ayarlar → Gizlilik ve Güvenlik → İzleme</em>).</p>
+
+    <h2>Çevrimiçi mod (Google Firebase)</h2>
+    <p>Çevrimiçi maçlar Google Firebase altyapısıyla çalışır. Oyuna başladığınızda size <strong>anonim</strong> bir kullanıcı kimliği atanır; bu kimlik gerçek kimliğinizle ilişkilendirilmez. Maç verileri Avrupa Birliği'ndeki (Frankfurt, Almanya) sunucularda saklanır. Firebase, hizmetin güvenliği ve işleyişi için IP adresi gibi teknik bilgileri işleyebilir. Ayrıntılar: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase gizlilik bilgileri</a>.</p>
+    <p>Takma adlar ve emojiler diğer oyuncular tarafından görülebilir. Takma adınızda gerçek adınızı veya kişisel bilgilerinizi kullanmamanızı öneririz.</p>
+
+    <h2>Yazı tipleri</h2>
+    <p>Uygulama, arayüz yazı tiplerini Google Fonts hizmetinden indirir; bu sırada IP adresiniz Google sunucularına iletilir.</p>
+
+    <h2>Saklama süresi</h2>
+    <p>Çevrimiçi oyun verileri, hesabınız etkin olduğu sürece saklanır. Uygulamayı 12 ay boyunca kullanmazsanız anonim hesabınız ve ilişkili oyun verileri silinebilir. Silme talebinizi aşağıdaki adrese iletebilirsiniz; talebiniz 30 gün içinde yerine getirilir.</p>
+
+    <h2>Haklarınız</h2>
+    <p>6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve Avrupa Genel Veri Koruma Tüzüğü (GDPR) kapsamında; verilerinize erişme, düzeltilmesini veya silinmesini isteme, işlenmesine itiraz etme ve reklam izninizi geri çekme haklarına sahipsiniz. Bu haklarınızı kullanmak için bizimle iletişime geçebilirsiniz.</p>
+
+    <h2>Çocuklar</h2>
+    <p>Volea 13 yaş altındaki çocuklara yönelik değildir ve bilerek hiçbir çocuktan kişisel veri toplamaz. Böyle bir durumu fark ederseniz bize bildirin; ilgili verileri sileriz.</p>
+
+    <h2>Futbol verileri</h2>
+    <p>Oyundaki futbolcu ve kulüp bilgileri, CC0 lisanslı açık kaynaklardan (Wikidata ve Transfermarkt tabanlı açık bir veri seti) derlenmiştir. Volea hiçbir kulüp, lig veya oyuncuyla bağlantılı değildir.</p>
+
+    <h2>Değişiklikler</h2>
+    <p>Bu politika güncellendiğinde yeni sürüm bu sayfada "Son güncelleme" tarihiyle yayınlanır. Önemli değişiklikleri uygulama içinden de duyururuz.</p>
+
+    <h2>İletişim</h2>
+    <p>MUON Studio · <a href="mailto:muazonurluer2312@gmail.com">muazonurluer2312@gmail.com</a></p>
+  </main>
+
+  <!-- ============================ ENGLISH ============================ -->
+  <main class="card" data-lang="en">
+    <p class="date">Last updated: September 30, 2026</p>
+    <p>This privacy policy explains what information is collected when you use <strong>Volea: Football Knowledge Arena</strong> (the "App"), a mobile game developed by MUON Studio ("we"), how it is used, and your rights.</p>
+
+    <h2>Summary</h2>
+    <ul>
+      <li>No email, phone number or real name is required to play.</li>
+      <li>The App shows ads through <strong>Google AdMob</strong>; device information such as your advertising ID is processed by Google for this purpose.</li>
+      <li><strong>Online mode</strong> stores an anonymous user ID and game data on Google Firebase servers to run matches.</li>
+      <li>We <strong>do not sell</strong> your data.</li>
+    </ul>
+
+    <h2>Information collected and why</h2>
+    <div class="scroll"><table>
+      <tr><th>Information</th><th>Purpose</th><th>Where</th></tr>
+      <tr><td>Language preference, single-player high scores</td><td>Game experience</td><td>Only on your device</td></tr>
+      <tr><td>Advertising ID, IP address, device and app information, ad interactions</td><td>Serving and measuring ads, preventing fraud; personalised ads if you consent</td><td>Google AdMob</td></tr>
+      <tr><td>Anonymous user ID</td><td>Identifying you in online matches</td><td>Google Firebase</td></tr>
+      <tr><td>Nickname (if you set one), match moves, scores, rankings, emojis sent</td><td>Running online matches, preventing cheating, leaderboards</td><td>Google Firebase</td></tr>
+      <tr><td>Purchase information (order ID, product, purchase status)</td><td>Delivering and verifying in-app purchases</td><td>Google Play</td></tr>
+      <tr><td>Your email address and message (only if you send an email via "Report incorrect data")</td><td>Fixing the reported error and replying to you</td><td>Our inbox</td></tr>
+    </table></div>
+    <p>Payment and card details are processed <strong>by Google Play</strong> and never reach us.</p>
+
+    <h2>Advertising (Google AdMob)</h2>
+    <p>The App uses AdMob, an advertising service of Google LLC. AdMob may use your advertising ID, IP address and technical information about your device to serve and measure ads. Users in the European Economic Area, the United Kingdom and Switzerland are asked for <strong>explicit consent</strong> in the App before personalised ads are shown; if you decline, non-personalised ads are shown. Learn how Google uses this data <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">here</a>.</p>
+    <p>You can reset or delete your advertising ID at any time in your device settings (Android: <em>Settings → Google → Ads</em>; iOS: <em>Settings → Privacy &amp; Security → Tracking</em>).</p>
+
+    <h2>Online mode (Google Firebase)</h2>
+    <p>Online matches run on Google Firebase. When you start playing, you are assigned an <strong>anonymous</strong> user ID that is not linked to your real identity. Match data is stored on servers in the European Union (Frankfurt, Germany). Firebase may process technical information such as your IP address for the security and operation of the service. Details: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy information</a>.</p>
+    <p>Nicknames and emojis are visible to other players. We recommend not using your real name or personal information in your nickname.</p>
+
+    <h2>Fonts</h2>
+    <p>The App downloads its interface fonts from Google Fonts; your IP address is transmitted to Google's servers during this process.</p>
+
+    <h2>Data retention</h2>
+    <p>Online game data is kept while your account is active. If you do not use the App for 12 months, your anonymous account and related game data may be deleted. You can send a deletion request to the address below; it will be fulfilled within 30 days.</p>
+
+    <h2>Your rights</h2>
+    <p>Under the Turkish Personal Data Protection Law (KVKK) and the EU General Data Protection Regulation (GDPR), you have the right to access your data, request its correction or deletion, object to its processing, and withdraw your advertising consent. Contact us to exercise these rights.</p>
+
+    <h2>Children</h2>
+    <p>Volea is not directed at children under 13 and does not knowingly collect personal data from children. If you become aware of such a case, please let us know and we will delete the data.</p>
+
+    <h2>Football data</h2>
+    <p>Player and club information in the game is compiled from CC0-licensed open sources (Wikidata and an open dataset based on Transfermarkt). Volea is not affiliated with any club, league or player.</p>
+
+    <h2>Changes</h2>
+    <p>When this policy is updated, the new version is published on this page with its "Last updated" date. We will also announce significant changes in the App.</p>
+
+    <h2>Contact</h2>
+    <p>MUON Studio · <a href="mailto:muazonurluer2312@gmail.com">muazonurluer2312@gmail.com</a></p>
+  </main>
+
+  <footer>© 2026 MUON Studio</footer>
+</div>
+
+<script>
+  function setLang(lang) {
+    document.body.classList.toggle('en', lang === 'en');
+    document.getElementById('btn-tr').classList.toggle('on', lang === 'tr');
+    document.getElementById('btn-en').classList.toggle('on', lang === 'en');
+    document.documentElement.lang = lang;
+  }
+  // Tarayıcı dili Türkçe değilse İngilizce aç
+  setLang((navigator.language || 'tr').toLowerCase().startsWith('tr') ? 'tr' : 'en');
+</script>
+</body>
+</html>
