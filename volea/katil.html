@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Volea · Odaya katıl</title>
+<meta name="description" content="Volea'da arkadaşının odasına katıl.">
+<meta property="og:title" content="Volea'da seni bir maç bekliyor">
+<meta property="og:description" content="Dokun, odaya katıl. Futbol bilgi oyunu.">
+<meta name="theme-color" content="#0D0E0C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=Big+Shoulders+Display:wght@900&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#0D0E0C; --surface:#161714; --border:#3A3B36; --lime:#D4FF3A; --coral:#FF5A36; --text:#F2EFE6; --muted:#A3A39A; }
+  * { box-sizing:border-box; margin:0; }
+  body { background:var(--bg); color:var(--text); font-family:Archivo,system-ui,sans-serif; min-height:100vh;
+         display:flex; align-items:center; justify-content:center; padding:24px 16px; }
+  main { width:100%; max-width:420px; }
+  .lbl { font-size:11px; letter-spacing:.24em; font-weight:800; color:var(--muted); text-transform:uppercase; }
+  .d { font-family:"Big Shoulders Display",Impact,sans-serif; font-weight:900; text-transform:uppercase; line-height:.9; }
+  h1 { font-size:clamp(40px, 13vw, 76px); margin:14px 0 4px; overflow-wrap:anywhere; }
+  .sub { color:#CFCCC2; line-height:1.5; margin-bottom:28px; }
+  .code { border:2px solid var(--border); border-radius:6px; padding:18px; text-align:center; background:var(--surface); margin-bottom:12px; }
+  .code .d { font-size:clamp(40px, 14vw, 64px); letter-spacing:.14em; color:var(--lime); padding-left:.14em; }
+  .copy { background:none; border:0; color:var(--muted); font:600 13px Archivo,sans-serif; margin-top:8px; cursor:pointer; text-decoration:underline; }
+  .btn { display:block; width:100%; text-align:center; text-decoration:none; padding:17px; border-radius:6px;
+         font:800 15px Archivo,sans-serif; letter-spacing:.06em; margin-top:12px; cursor:pointer; border:2px solid var(--lime); }
+  .primary { background:var(--lime); color:var(--bg); }
+  .ghost { background:transparent; color:var(--text); border-color:var(--border); }
+  .note { font-size:13px; color:var(--muted); line-height:1.5; margin-top:18px; }
+  .err { color:var(--coral); }
+  [hidden] { display:none !important; }
+</style>
+</head>
+<body>
+<main>
+  <div class="lbl">MUON STUDIO · VOLEA</div>
+  <h1 class="d">Maça<br>davetlisin.</h1>
+  <p class="sub" id="sub">Arkadaşın seni Volea'da bir odaya çağırıyor. Uygulama açılmazsa kodu kendin yaz.</p>
+
+  <div class="code" id="codeBox">
+    <div class="lbl">ODA KODU</div>
+    <div class="d" id="code">------</div>
+    <button class="copy" id="copy" type="button">Kodu kopyala</button>
+  </div>
+
+  <a class="btn primary" id="open" href="#">UYGULAMADA AÇ</a>
+  <a class="btn ghost" id="store" href="https://play.google.com/store/apps/details?id=com.muonstudio.volea">GOOGLE PLAY'DEN İNDİR</a>
+  <p class="note" id="iosNote" hidden>iPhone sürümü yakında App Store'da. O zamana kadar arkadaşın Android'den oda kurabilir.</p>
+  <p class="note" id="how">Uygulamayı açtıktan sonra: <b>Arkadaşla oyna → Odaya katıl</b> ve kodu yaz.</p>
+  <p class="note err" id="bad" hidden>Bu bağlantıda geçerli bir oda kodu yok. Arkadaşından kodu tekrar iste.</p>
+</main>
+<script>
+(function () {
+  var PKG = 'com.muonstudio.volea';
+  var PLAY = 'https://play.google.com/store/apps/details?id=' + PKG;
+  var params = new URLSearchParams(location.search);
+  var code = (params.get('kod') || params.get('code') || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+  var ua = navigator.userAgent || '';
+  var android = /Android/i.test(ua);
+  var ios = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var $ = function (id) { return document.getElementById(id); };
+
+  if (code.length !== 6) {
+    $('codeBox').hidden = true; $('open').hidden = true; $('how').hidden = true; $('bad').hidden = false;
+    return;
+  }
+  $('code').textContent = code;
+  document.title = 'Volea · Oda ' + code;
+
+  var scheme = 'volea://katil/' + code;
+  // Android: uygulama varsa açılır, yoksa Play Store'a gider
+  var intent = 'intent://katil/' + code + '#Intent;scheme=volea;package=' + PKG +
+    ';S.browser_fallback_url=' + encodeURIComponent(PLAY) + ';end';
+  $('open').href = android ? intent : scheme;
+  if (ios) { $('store').hidden = true; $('iosNote').hidden = false; }
+
+  $('copy').addEventListener('click', function () {
+    var done = function () { $('copy').textContent = 'Kopyalandı ✓'; };
+    if (navigator.clipboard) navigator.clipboard.writeText(code).then(done, done); else done();
+  });
+
+  // Android'de sayfa açılır açılmaz uygulamayı dene (WhatsApp içi tarayıcı dahil)
+  if (android) setTimeout(function () { location.href = intent; }, 300);
+})();
+</script>
+</body>
+</html>

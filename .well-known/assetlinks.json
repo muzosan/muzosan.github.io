@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.muonstudio.volea",
+      "sha256_cert_fingerprints": [
+        "2A:FF:26:92:1F:63:F4:8E:EF:E7:7B:8A:BA:21:D4:5E:C8:D5:FD:A4:22:27:E5:1D:BC:90:59:26:CA:5F:B9:BE",
+        "35:DA:6C:12:F0:22:2C:54:94:71:03:70:8C:66:B9:C0:34:05:8E:7C:5E:24:9A:73:91:81:B4:A7:D2:04:6C:7B"
+      ]
+    }
+  }
+]
