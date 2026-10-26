@@ -40,9 +40,9 @@
            text-decoration: none; font-weight: 800; color: #0A1124;
            background: linear-gradient(180deg, var(--gold), var(--gold2)); box-shadow: 0 6px 18px rgba(200,150,47,.3); }
   .store.soon { background: transparent; color: var(--gold); border: 1.5px solid var(--line); box-shadow: none; }
-  .phone { justify-self: center; width: min(300px, 80vw); border-radius: 36px; border: 3px solid var(--gold2);
+  .phone { justify-self: center; width: min(320px, 80vw); border-radius: 28px; border: 3px solid var(--gold2);
            overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,.55); }
-  .phone img { display: block; width: 100%; }
+  .phone img { display: block; width: 100%; height: auto; max-height: 62vh; object-fit: cover; object-position: top; }
   section { padding: 40px 0; border-top: 1px solid var(--line); }
   h2 { font-size: 1.6rem; margin: 0 0 18px; color: var(--gold); }
   .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -50,7 +50,8 @@
   .card b { display: block; margin-bottom: 4px; }
   .card p { margin: 0; color: var(--muted); }
   .shots { display: flex; gap: 14px; overflow-x: auto; padding-bottom: 10px; scroll-snap-type: x mandatory; }
-  .shots img { width: 200px; flex: none; border-radius: 18px; border: 1px solid var(--line); scroll-snap-align: start; }
+  .shots img { width: 168px; height: auto; flex: none; border-radius: 16px; border: 1px solid var(--line); scroll-snap-align: start; }
+  @media (min-width: 900px) { .shots { display: grid; grid-template-columns: repeat(6, 1fr); overflow: visible; } .shots img { width: 100%; } }
   footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
   footer a { margin-right: 16px; }
   [data-l="en"] { display: none; }
@@ -81,7 +82,7 @@
         <a class="store soon" href="#" aria-disabled="true"><span data-l="tr">Google Play · Yakında</span><span data-l="en">Google Play · Coming soon</span></a>
       </div>
     </div>
-    <div class="phone"><img src="tr_1.jpg" alt="Oyundan bir sokak" width="540" height="960"></div>
+    <div class="phone"><img src="tr_1.jpg" alt="Oyundan bir sokak" width="540" height="720"></div>
   </div>
 
   <section>
@@ -102,12 +103,12 @@
   <section>
     <h2 data-l="tr">Ekran görüntüleri</h2><h2 data-l="en">Screenshots</h2>
     <div class="shots">
-      <img src="tr_1.jpg" alt="" width="540" height="960" loading="lazy">
-      <img src="tr_2.jpg" alt="" width="540" height="960" loading="lazy">
-      <img src="tr_3.jpg" alt="" width="540" height="960" loading="lazy">
-      <img src="tr_4.jpg" alt="" width="540" height="960" loading="lazy">
-      <img src="tr_5.jpg" alt="" width="540" height="960" loading="lazy">
-      <img src="tr_6.jpg" alt="" width="540" height="960" loading="lazy">
+      <img src="tr_1.jpg" alt="" width="540" height="720" loading="lazy">
+      <img src="tr_2.jpg" alt="" width="540" height="720" loading="lazy">
+      <img src="tr_3.jpg" alt="" width="540" height="720" loading="lazy">
+      <img src="tr_4.jpg" alt="" width="540" height="720" loading="lazy">
+      <img src="tr_5.jpg" alt="" width="540" height="720" loading="lazy">
+      <img src="tr_6.jpg" alt="" width="540" height="720" loading="lazy">
     </div>
   </section>
 
