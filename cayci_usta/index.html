@@ -7,7 +7,7 @@
 <meta name="description" content="Çaycı Usta: mahalle çay ocağını İstanbul'un en meşhur mekânına dönüştür. MUON Studio'nun çay ocağı tycoon oyunu. iPhone ve Android.">
 <meta property="og:title" content="Çaycı Usta · Çay Ocağı Tycoon">
 <meta property="og:description" content="Çay demle, simit diz, ustalarını topla. iPhone ve Android için ücretsiz.">
-<meta property="og:image" content="https://muzosan.github.io/cayci_usta/img/tr_1.jpg">
+<meta property="og:image" content="https://muzosan.github.io/cayci_usta/tr_1.jpg">
 <link rel="icon" href="icon.png">
 <style>
   :root {
@@ -58,9 +58,7 @@
   .shots img { width: 100%; border-radius: 18px; scroll-snap-align: start; border: 1px solid var(--line); }
   footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 24px 0 40px; color: var(--muted);
            font-size: .92rem; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
-  [data-en] { display: none; }
-  html[lang="en"] [data-tr] { display: none; }
-  html[lang="en"] [data-en] { display: revert; }
+  html:not([lang="en"]) [data-en], html[lang="en"] [data-tr] { display: none !important; }
   @media (max-width: 760px) {
     .hero { grid-template-columns: 1fr; padding-bottom: 32px; }
     .hero-shot { width: min(300px, 90%); }
@@ -93,8 +91,8 @@
       <p class="note" data-tr>Ücretsiz. Reklam ve isteğe bağlı uygulama içi satın almalar içerir.</p>
       <p class="note" data-en>Free to play. Contains ads and optional in-app purchases.</p>
     </div>
-    <img class="hero-shot" data-tr src="img/tr_1.jpg" alt="Çaycı Usta oyun ekranı">
-    <img class="hero-shot" data-en src="img/en_1.jpg" alt="Çaycı Usta gameplay">
+    <img class="hero-shot" data-tr src="tr_1.jpg" alt="Çaycı Usta oyun ekranı">
+    <img class="hero-shot" data-en src="en_1.jpg" alt="Çaycı Usta gameplay">
   </section>
 
   <section class="features">
@@ -121,14 +119,14 @@
   <section>
     <h2 data-tr>Ekran görüntüleri</h2><h2 data-en>Screenshots</h2>
     <div class="shots" data-tr>
-      <img src="img/tr_1.jpg" alt="" loading="lazy"><img src="img/tr_2.jpg" alt="" loading="lazy">
-      <img src="img/tr_3.jpg" alt="" loading="lazy"><img src="img/tr_4.jpg" alt="" loading="lazy">
-      <img src="img/tr_5.jpg" alt="" loading="lazy"><img src="img/tr_6.jpg" alt="" loading="lazy">
+      <img src="tr_1.jpg" alt="" loading="lazy"><img src="tr_2.jpg" alt="" loading="lazy">
+      <img src="tr_3.jpg" alt="" loading="lazy"><img src="tr_4.jpg" alt="" loading="lazy">
+      <img src="tr_5.jpg" alt="" loading="lazy"><img src="tr_6.jpg" alt="" loading="lazy">
     </div>
     <div class="shots" data-en>
-      <img src="img/en_1.jpg" alt="" loading="lazy"><img src="img/en_2.jpg" alt="" loading="lazy">
-      <img src="img/en_3.jpg" alt="" loading="lazy"><img src="img/en_4.jpg" alt="" loading="lazy">
-      <img src="img/en_5.jpg" alt="" loading="lazy"><img src="img/en_6.jpg" alt="" loading="lazy">
+      <img src="en_1.jpg" alt="" loading="lazy"><img src="en_2.jpg" alt="" loading="lazy">
+      <img src="en_3.jpg" alt="" loading="lazy"><img src="en_4.jpg" alt="" loading="lazy">
+      <img src="en_5.jpg" alt="" loading="lazy"><img src="en_6.jpg" alt="" loading="lazy">
     </div>
   </section>
 

@@ -54,9 +54,7 @@
   @media (min-width: 900px) { .shots { display: grid; grid-template-columns: repeat(6, 1fr); overflow: visible; } .shots img { width: 100%; } }
   footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
   footer a { margin-right: 16px; }
-  [data-l="en"] { display: none; }
-  html[lang="en"] [data-l="tr"] { display: none; }
-  html[lang="en"] [data-l="en"] { display: revert; }
+  html:not([lang="en"]) [data-l="en"], html[lang="en"] [data-l="tr"] { display: none !important; }
   @media (max-width: 760px) {
     .hero { grid-template-columns: 1fr; }
     .grid { grid-template-columns: 1fr; }

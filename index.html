@@ -16,8 +16,7 @@
   header{text-align:center;margin-bottom:48px}
   .brand{font-weight:700;font-size:15px;letter-spacing:.3em;color:var(--soft)}
   h1{font-size:clamp(32px,7vw,54px);font-weight:700;margin:14px 0 10px;line-height:1.1;text-wrap:balance}
-  .lead{color:var(--soft);font-size:17px}
-  .apps{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .apps{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
   .card{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:24px;display:flex;flex-direction:column;gap:14px}
   .card.wide{grid-column:1/-1;flex-direction:row;align-items:center;gap:26px;padding:30px}
   .head{display:flex;gap:16px;align-items:center}
@@ -26,7 +25,7 @@
   .card.wide .logo{width:116px;height:116px;border-radius:28px;font-size:56px}
   .logo img{width:100%;height:100%;object-fit:cover;display:block}
   .logo.green{background:linear-gradient(135deg,#1fbf73,#0e6b45)}
-  .logo.home{background:linear-gradient(135deg,#f0a35e,#b5602a)}
+  .logo.home{background:#B4532F}
   .tag{display:inline-block;font-size:12px;font-weight:500;color:var(--teal);border:1px solid var(--teal);border-radius:99px;padding:2px 11px;margin-bottom:6px}
   .tag.soon{color:#ffd27a;border-color:#ffd27a}
   h2{font-size:22px;font-weight:700;line-height:1.2}
@@ -54,12 +53,11 @@
   <header>
     <div class="brand">MUON STUDIO</div>
     <h1>Eğlenceli mobil oyunlar<br>ve kullanışlı uygulamalar</h1>
-    <p class="lead">Elazığ'dan bağımsız bir geliştirici stüdyosu.</p>
   </header>
 
   <main class="apps">
     <section class="card wide">
-      <div class="logo" aria-hidden="true">🕵️</div>
+      <div class="logo" aria-hidden="true"><img src="logos/bluff.png" alt="" onerror="this.replaceWith('🕵️')"></div>
       <div class="info">
         <span class="tag">Şimdi yayında</span>
         <h2>Bluff: <span>Sahtekarı Bul</span></h2>
@@ -74,7 +72,7 @@
 
     <section class="card">
       <div class="head">
-        <div class="logo green" aria-hidden="true">⚽</div>
+        <div class="logo green" aria-hidden="true"><img src="logos/volea.png" alt="" onerror="this.replaceWith('⚽')"></div>
         <div><span class="tag soon">Yakında</span><h2>Volea</h2></div>
       </div>
       <p>Futbol bilgi arenası. XOX, Kulüp Avı, Kariyer Zinciri ve daha fazla modla futbol bilgini arkadaşlarına karşı sına.</p>
@@ -110,12 +108,13 @@
 
     <section class="card">
       <div class="head">
-        <div class="logo home" aria-hidden="true">🏠</div>
+        <div class="logo home" aria-hidden="true"><svg viewBox="0 0 100 100" width="44" height="44" fill="none" stroke="#F7F2EA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 50 50 18 86 50"/><path d="M25 41v43h50V41"/><path d="M41.5 45h17v30L50 66.5 41.5 75z" fill="#F7F2EA" stroke="none"/></svg></div>
         <div><span class="tag soon">Yakında</span><h2>Hane</h2></div>
       </div>
-      <p>Garanti ve bakım takibi. Evindeki eşyaların faturası, garantisi ve bakım zamanı tek yerde, hiçbirini unutma.</p>
+      <p>Evinin hafızası. Garanti, bakım, belgeler ve ustalar tek yerde; zamanı gelince Hane sana hatırlatır.</p>
       <div class="btns">
-        <a class="btn alt" href="https://muzosan.github.io/hane/">Gizlilik</a>
+        <a class="btn" href="https://muzosan.github.io/hane/">Tanıtım</a>
+        <a class="btn alt" href="https://muzosan.github.io/hane/gizlilik.html">Gizlilik</a>
       </div>
     </section>
   </main>
