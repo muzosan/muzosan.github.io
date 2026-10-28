@@ -1,0 +1,12 @@
+{
+  "pending": {
+    "spotify/ogrenci": {
+      "price": 115.0,
+      "first_seen": "2026-10-28",
+      "run": "40611489268"
+    }
+  },
+  "run_id": "40611489268",
+  "last_run": "2026-10-28T03:52:41+03:00",
+  "last_problem_hash": "61d5402a3fc6992811c52f92e040b25ca5144618"
+}
