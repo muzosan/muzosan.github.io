@@ -1,0 +1,847 @@
+{
+  "schema": 1,
+  "listVersion": "2026-10-28.2",
+  "updatedAt": "2026-10-28T03:00:00+03:00",
+  "baseCurrency": "TRY",
+  "notes": "Fiyatlar aylık ve KDV dahil tüketici fiyatlarıdır. needsReview=true olan kayıtlar uygulamada gösterilmeden önce resmi siteden teyit edilmelidir. Uygulama bu dosyayı açılışta çeker; listVersion değiştiyse yerel kataloğu günceller ve previousPrice farkı olan kayıtlar için zam/indirim bildirimi üretir.",
+  "fx": {
+    "source": "TCMB döviz satış kuru",
+    "date": "2026-10-27",
+    "rates": {
+      "USD": 49.7627,
+      "EUR": 55.7542,
+      "GBP": 66.5656
+    },
+    "liveSourceHint": "Uygulama kurları her açılışta TCMB today.xml veya bir kur API'sinden canlı çekmeli; bu değerler yalnızca çevrimdışı yedektir."
+  },
+  "services": [
+    {
+      "id": "netflix",
+      "name": "Netflix",
+      "category": "video",
+      "plans": [
+        {
+          "id": "temel",
+          "name": "Temel",
+          "price": 259.99,
+          "currency": "TRY",
+          "period": "month",
+          "previousPrice": 189.99,
+          "changedAt": "2026-10"
+        },
+        {
+          "id": "standart",
+          "name": "Standart",
+          "price": 389.99,
+          "currency": "TRY",
+          "period": "month",
+          "previousPrice": 289.99,
+          "changedAt": "2026-10"
+        },
+        {
+          "id": "premium",
+          "name": "Premium",
+          "price": 499.99,
+          "currency": "TRY",
+          "period": "month",
+          "previousPrice": 379.99,
+          "changedAt": "2026-10"
+        }
+      ],
+      "verifiedAt": "2026-10-28",
+      "confidence": "high",
+      "needsReview": false,
+      "sources": [
+        "https://egirisim.com/2026/10/09/netflix-turkiye-abonelik-ucretlerine-zam-yapti-premium-paket-49999-tl-oldu/",
+        "https://abonelikfiyatlari.com/"
+      ]
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify Premium",
+      "category": "muzik",
+      "plans": [
+        {
+          "id": "bireysel",
+          "name": "Bireysel",
+          "price": 115,
+          "currency": "TRY",
+          "period": "month",
+          "previousPrice": 99,
+          "changedAt": "2026-10-02"
+        },
+        {
+          "id": "ogrenci",
+          "name": "Öğrenci",
+          "price": 60,
+          "currency": "TRY",
+          "period": "month"
+        },
+        {
+          "id": "duo",
+          "name": "Duo",
+          "price": 159,
+          "currency": "TRY",
+          "period": "month",
+          "seats": 2
+        },
+        {
+          "id": "aile",
+          "name": "Aile",
+          "price": 199,
+          "currency": "TRY",
+          "period": "month",
+          "seats": 6
+        }
+      ],
+      "verifiedAt": "2026-10-28",
+      "confidence": "high",
+      "needsReview": false,
+      "sources": [
+        "https://abonelikfiyatlari.com/servis/spotify",
+        "https://onedio.com/haber/spotify-turkiye-ye-zam-geldi-bireysel-premium-115-tl-aile-paketi-199-tl-oldu-1385354"
+      ]
+    },
+    {
+      "id": "youtube-premium",
+      "name": "YouTube Premium",
+      "category": "video",
+      "plans": [
+        {
+          "id": "bireysel",
+          "name": "Bireysel",
+          "price": 119.99,
+          "currency": "TRY",
+          "period": "month",
+          "previousPrice": 79.99,
+          "changedAt": "2026-06"
+        },
+        {
+          "id": "aile",
+          "name": "Aile",
+          "price": 239.99,
+          "currency": "TRY",
+          "period": "month",
+          "previousPrice": 159.99,
+          "changedAt": "2026-06",
+          "seats": 6
+        },
+        {
+          "id": "ogrenci",
+          "name": "Öğrenci",
+          "price": 79.99,
+          "currency": "TRY",
+          "period": "month",
+          "previousPrice": 52.99,
+          "changedAt": "2026-06"
+        },
+        {
+          "id": "lite",
+          "name": "Premium Lite",
+          "price": 79.99,
+          "currency": "TRY",
+          "period": "month",
+          "previousPrice": 49.99,
+          "changedAt": "2026-06"
+        }
+      ],
+      "verifiedAt": "2026-10-28",
+      "confidence": "high",
+      "needsReview": false,
+      "sources": [
+        "https://www.donanimhaber.com/amp/youtube-premium-a-turkiye-de-yuzde-50-zam-fiyatlar-ne-kadar--206697",
+        "https://abonelikfiyatlari.com/"
+      ]
+    },
+    {
+      "id": "disney-plus",
+      "name": "Disney+",
+      "category": "video",
+      "plans": [
+        {
+          "id": "reklamli",
+          "name": "Reklamlı",
+          "price": 249.9,
+          "currency": "TRY",
+          "period": "month",
+          "previousPrice": 164.9,
+          "changedAt": "2025-09-30"
+        },
+        {
+          "id": "reklamsiz",
+          "name": "Reklamsız",
+          "price": 449.9,
+          "currency": "TRY",
+          "period": "month",
+          "previousPrice": 349.9,
+          "changedAt": "2025-09-30"
+        },
+        {
+          "id": "reklamli-yillik",
+          "name": "Reklamlı Yıllık",
+          "price": 1649,
+          "currency": "TRY",
+          "period": "year"
+        },
+        {
+          "id": "reklamsiz-yillik",
+          "name": "Reklamsız Yıllık",
+          "price": 3499,
+          "currency": "TRY",
+          "period": "year"
+        }
+      ],
+      "verifiedAt": "2026-10-28",
+      "confidence": "high",
+      "needsReview": false,
+      "sources": [
+        "https://pchocasi.com.tr/disney-plus-turkiye-fiyatlari-yine-degisti-yeni-bir-zam-geldi/",
+        "https://www.tamindir.com/blog/disney-plus-fiyatlari_74382/"
+      ]
+    },
+    {
+      "id": "amazon-prime",
+      "name": "Amazon Prime",
+      "category": "video",
+      "plans": [
+        {
+          "id": "prime",
+          "name": "Prime Üyelik",
+          "price": 69.9,
+          "currency": "TRY",
+          "period": "month"
+        },
+        {
+          "id": "reklamsiz-ek",
+          "name": "Prime Video Reklamsız Ek Paket",
+          "price": 59.9,
+          "currency": "TRY",
+          "period": "month",
+          "addon": true
+        }
+      ],
+      "verifiedAt": "2026-10-28",
+      "confidence": "high",
+      "needsReview": false,
+      "sources": [
+        "https://www.teknoblog.com/prime-video-reklamsiz-paket-fiyati-turkiyede-5990-tl-oldu/",
+        "https://www.webtekno.com/amazon-prime-video-uyelik-fiyatlar-h92957.html"
+      ]
+    },
+    {
+      "id": "hbo-max",
+      "name": "HBO Max",
+      "category": "video",
+      "plans": [
+        {
+          "id": "standart",
+          "name": "Standart",
+          "price": 229.9,
+          "currency": "TRY",
+          "period": "month"
+        },
+        {
+          "id": "ozel",
+          "name": "Özel",
+          "price": 299.9,
+          "currency": "TRY",
+          "period": "month"
+        },
+        {
+          "id": "standart-yillik",
+          "name": "Standart Yıllık",
+          "price": 2299,
+          "currency": "TRY",
+          "period": "year"
+        },
+        {
+          "id": "ozel-yillik",
+          "name": "Özel Yıllık",
+          "price": 2999,
+          "currency": "TRY",
+          "period": "year"
+        }
+      ],
+      "verifiedAt": "2026-10-28",
+      "confidence": "medium",
+      "needsReview": false,
+      "sources": [
+        "https://www.webtekno.com/max-nedir-nasil-kullanilir-ucreti-h158390.html",
+        "https://abonelikfiyatlari.com/"
+      ]
+    },
+    {
+      "id": "apple-music",
+      "name": "Apple Music",
+      "category": "muzik",
+      "plans": [
+        {
+          "id": "bireysel",
+          "name": "Bireysel",
+          "price": 89.99,
+          "currency": "TRY",
+          "period": "month",
+          "previousPrice": 59.99,
+          "changedAt": "2026-07-18"
+        },
+        {
+          "id": "aile",
+          "name": "Aile",
+          "price": 149.99,
+          "currency": "TRY",
+          "period": "month",
+          "previousPrice": 99.99,
+          "changedAt": "2026-07-18",
+          "seats": 6
+        },
+        {
+          "id": "ogrenci",
+          "name": "Öğrenci",
+          "price": 49.99,
+          "currency": "TRY",
+          "period": "month",
+          "previousPrice": 32.99,
+          "changedAt": "2026-07-18"
+        }
+      ],
+      "verifiedAt": "2026-10-28",
+      "confidence": "high",
+      "needsReview": false,
+      "sources": [
+        "https://www.teknoblog.com/apple-music-ve-icloud-turkiye-zamli-fiyatlari-2026/",
+        "https://shiftdelete.net/apple-music-ve-icloud-turkiye-fiyatlarina-zam-geldi"
+      ]
+    },
+    {
+      "id": "icloud-plus",
+      "name": "iCloud+",
+      "category": "bulut",
+      "note": "Türkiye'de Apple TV ve Apple Arcade, Eylül 2026'dan itibaren iCloud+ paketlerine dahil; ayrı satılmıyor.",
+      "plans": [
+        {
+          "id": "50gb",
+          "name": "50 GB",
+          "price": 49.99,
+          "currency": "TRY",
+          "period": "month",
+          "previousPrice": 39.99,
+          "changedAt": "2026-07-18"
+        },
+        {
+          "id": "200gb",
+          "name": "200 GB",
+          "price": 169.99,
+          "currency": "TRY",
+          "period": "month",
+          "previousPrice": 129.99,
+          "changedAt": "2026-07-18"
+        },
+        {
+          "id": "2tb",
+          "name": "2 TB",
+          "price": 549.99,
+          "currency": "TRY",
+          "period": "month",
+          "previousPrice": 399.99,
+          "changedAt": "2026-07-18"
+        },
+        {
+          "id": "6tb",
+          "name": "6 TB",
+          "price": 1699.99,
+          "currency": "TRY",
+          "period": "month",
+          "previousPrice": 1299.99,
+          "changedAt": "2026-07-18"
+        },
+        {
+          "id": "12tb",
+          "name": "12 TB",
+          "price": 3399.99,
+          "currency": "TRY",
+          "period": "month",
+          "previousPrice": 2499.99,
+          "changedAt": "2026-07-18"
+        }
+      ],
+      "verifiedAt": "2026-10-28",
+      "confidence": "high",
+      "needsReview": false,
+      "sources": [
+        "https://support.apple.com/HT5879",
+        "https://www.tamindir.com/haber/icloud-plus-temmuz-2026-zammi_110856/"
+      ]
+    },
+    {
+      "id": "google-one",
+      "name": "Google One",
+      "category": "bulut",
+      "plans": [
+        {
+          "id": "2tb",
+          "name": "2 TB",
+          "price": 359.99,
+          "currency": "TRY",
+          "period": "month",
+          "previousPrice": 204.99,
+          "changedAt": "2026-07-27"
+        },
+        {
+          "id": "5tb",
+          "name": "5 TB",
+          "price": 1519.99,
+          "currency": "TRY",
+          "period": "month",
+          "previousPrice": 869.99,
+          "changedAt": "2026-07-27"
+        },
+        {
+          "id": "10tb",
+          "name": "10 TB",
+          "price": 1709.99,
+          "currency": "TRY",
+          "period": "month",
+          "previousPrice": 979.99,
+          "changedAt": "2026-07-27"
+        },
+        {
+          "id": "20tb",
+          "name": "20 TB",
+          "price": 3479.99,
+          "currency": "TRY",
+          "period": "month",
+          "previousPrice": 1989.99,
+          "changedAt": "2026-07-27"
+        }
+      ],
+      "verifiedAt": "2026-10-28",
+      "confidence": "medium",
+      "needsReview": true,
+      "note": "Ağustos 2026 zammında paket adları ve içerikleri değişti (2 TB = AI Plus olarak geçiyor), 100/200 GB fiyatı açıklanmadı. one.google.com/about/plans sayfasından Türkiye hesabıyla teyit edilmeli.",
+      "sources": [
+        "https://www.teknoblog.com/google-one-fiyatlari-yuzde-76ya-kadar-artti/",
+        "https://www.webtekno.com/google-one-zam-geldi-iste-yeni-fiyatlar-h221995.html"
+      ]
+    },
+    {
+      "id": "google-ai",
+      "name": "Google AI (Gemini)",
+      "category": "yapay-zeka",
+      "plans": [
+        {
+          "id": "plus",
+          "name": "AI Plus",
+          "price": 199.99,
+          "currency": "TRY",
+          "period": "month"
+        },
+        {
+          "id": "pro",
+          "name": "AI Pro",
+          "price": 719.99,
+          "currency": "TRY",
+          "period": "month"
+        }
+      ],
+      "verifiedAt": "2026-10-28",
+      "confidence": "low",
+      "needsReview": true,
+      "note": "Mayıs 2026 fiyatı; Temmuz 2026 Google One zammından etkilenmiş olabilir.",
+      "sources": [
+        "https://www.teknoblog.com/google-ai-turkiye-fiyatlari-plus-pro-ve-ultra-farklari/"
+      ]
+    },
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "category": "yapay-zeka",
+      "plans": [
+        {
+          "id": "plus-web",
+          "name": "Plus (web)",
+          "price": 20,
+          "currency": "USD",
+          "period": "month",
+          "note": "Banka kur farkı ve vergiler eklenebilir."
+        },
+        {
+          "id": "plus-store",
+          "name": "Plus (App Store / Google Play)",
+          "price": 999,
+          "currency": "TRY",
+          "period": "month",
+          "changedAt": "2026-06"
+        }
+      ],
+      "verifiedAt": "2026-10-28",
+      "confidence": "high",
+      "needsReview": false,
+      "sources": [
+        "https://shiftdelete.net/chatgpt-plus-turkiye-fiyatlarina-zam-geldi-iste-yeni-fiyat"
+      ]
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "category": "yapay-zeka",
+      "plans": [
+        {
+          "id": "pro-web",
+          "name": "Pro (web)",
+          "price": 20,
+          "currency": "USD",
+          "period": "month",
+          "note": "Banka kur farkı ve vergiler eklenebilir."
+        },
+        {
+          "id": "pro-store",
+          "name": "Pro (App Store)",
+          "price": 999.99,
+          "currency": "TRY",
+          "period": "month",
+          "previousPrice": 799.99,
+          "changedAt": "2026-07"
+        },
+        {
+          "id": "max5-store",
+          "name": "Max 5x (App Store)",
+          "price": 6999.99,
+          "currency": "TRY",
+          "period": "month",
+          "previousPrice": 4999.99,
+          "changedAt": "2026-07"
+        }
+      ],
+      "verifiedAt": "2026-10-28",
+      "confidence": "high",
+      "needsReview": false,
+      "sources": [
+        "https://www.webtekno.com/claude-app-store-paket-fiyatlari-zamlandi-h219478.html"
+      ]
+    },
+    {
+      "id": "microsoft-365",
+      "name": "Microsoft 365",
+      "category": "verimlilik",
+      "plans": [
+        {
+          "id": "bireysel",
+          "name": "Bireysel",
+          "price": 329.99,
+          "currency": "TRY",
+          "period": "month"
+        },
+        {
+          "id": "bireysel-yillik",
+          "name": "Bireysel Yıllık",
+          "price": 3299.99,
+          "currency": "TRY",
+          "period": "year"
+        },
+        {
+          "id": "aile",
+          "name": "Aile",
+          "price": 409.99,
+          "currency": "TRY",
+          "period": "month",
+          "seats": 6
+        },
+        {
+          "id": "aile-yillik",
+          "name": "Aile Yıllık",
+          "price": 4099.99,
+          "currency": "TRY",
+          "period": "year",
+          "seats": 6
+        }
+      ],
+      "verifiedAt": "2026-10-28",
+      "confidence": "high",
+      "needsReview": false,
+      "sources": [
+        "https://www.microsoft.com/tr-tr/microsoft-365/p/microsoft-365-personal/cfq7ttc0k5bf",
+        "https://www.microsoft.com/tr-tr/microsoft-365/p/microsoft-365-family/cfq7ttc0k5dm"
+      ]
+    },
+    {
+      "id": "ps-plus",
+      "name": "PlayStation Plus",
+      "category": "oyun",
+      "plans": [
+        {
+          "id": "essential",
+          "name": "Essential",
+          "price": 400,
+          "currency": "TRY",
+          "period": "month",
+          "changedAt": "2026-05-20"
+        },
+        {
+          "id": "extra",
+          "name": "Extra",
+          "price": 600,
+          "currency": "TRY",
+          "period": "month",
+          "changedAt": "2026-05-20"
+        },
+        {
+          "id": "deluxe",
+          "name": "Deluxe",
+          "price": 710,
+          "currency": "TRY",
+          "period": "month",
+          "changedAt": "2026-05-20"
+        },
+        {
+          "id": "essential-yillik",
+          "name": "Essential Yıllık",
+          "price": 2890,
+          "currency": "TRY",
+          "period": "year",
+          "previousPrice": 2180,
+          "changedAt": "2026-05-20"
+        },
+        {
+          "id": "extra-yillik",
+          "name": "Extra Yıllık",
+          "price": 4810,
+          "currency": "TRY",
+          "period": "year",
+          "previousPrice": 3645,
+          "changedAt": "2026-05-20"
+        },
+        {
+          "id": "deluxe-yillik",
+          "name": "Deluxe Yıllık",
+          "price": 5560,
+          "currency": "TRY",
+          "period": "year",
+          "previousPrice": 4266,
+          "changedAt": "2026-05-20"
+        }
+      ],
+      "verifiedAt": "2026-10-28",
+      "confidence": "high",
+      "needsReview": false,
+      "sources": [
+        "https://goygoyengine.com/haber/playstation-plus-yeni-turkiye-fiyatlari-belli-oldu/",
+        "https://x.com/AntalyaHakkinda/status/2057372759643079033"
+      ]
+    },
+    {
+      "id": "xbox-game-pass",
+      "name": "Xbox Game Pass",
+      "category": "oyun",
+      "plans": [
+        {
+          "id": "essential",
+          "name": "Essential",
+          "price": 269,
+          "currency": "TRY",
+          "period": "month"
+        },
+        {
+          "id": "premium",
+          "name": "Premium",
+          "price": 409,
+          "currency": "TRY",
+          "period": "month"
+        },
+        {
+          "id": "pc",
+          "name": "PC Game Pass",
+          "price": 419,
+          "currency": "TRY",
+          "period": "month",
+          "previousPrice": 449,
+          "changedAt": "2026-04-21"
+        },
+        {
+          "id": "ultimate",
+          "name": "Ultimate",
+          "price": 529,
+          "currency": "TRY",
+          "period": "month",
+          "previousPrice": 799,
+          "changedAt": "2026-04-21"
+        }
+      ],
+      "verifiedAt": "2026-10-28",
+      "confidence": "medium",
+      "needsReview": false,
+      "sources": [
+        "https://www.donanimhaber.com/xbox-game-pass-fiyatlarina-indirim-geldi-iste-yeni-fiyatlar--204765"
+      ]
+    },
+    {
+      "id": "tabii",
+      "name": "tabii",
+      "category": "video",
+      "plans": [
+        {
+          "id": "premium",
+          "name": "Premium",
+          "price": 99,
+          "currency": "TRY",
+          "period": "month"
+        }
+      ],
+      "verifiedAt": "2026-10-28",
+      "confidence": "medium",
+      "needsReview": false,
+      "sources": [
+        "https://www.milligazete.com.tr/tabii-spor-ucreti-2026-ne-kadar-aylik-kac-tl-trt-tabii-premium-uyelik-ucretli-mi-ucretsiz-mac-nasil-izlenir"
+      ]
+    },
+    {
+      "id": "tod",
+      "name": "TOD",
+      "category": "spor",
+      "plans": [
+        {
+          "id": "eglence",
+          "name": "Eğlence",
+          "price": 129,
+          "currency": "TRY",
+          "period": "month"
+        },
+        {
+          "id": "eglence-yillik",
+          "name": "Eğlence Yıllık (12 × 99 TL)",
+          "price": 1188,
+          "currency": "TRY",
+          "period": "year"
+        },
+        {
+          "id": "spor-extra",
+          "name": "Spor Extra",
+          "price": 350,
+          "currency": "TRY",
+          "period": "month"
+        },
+        {
+          "id": "spor-extra-yillik",
+          "name": "Spor Extra Yıllık (12 × 229 TL)",
+          "price": 2748,
+          "currency": "TRY",
+          "period": "year"
+        },
+        {
+          "id": "super-lig",
+          "name": "Süper Lig",
+          "price": 1590,
+          "currency": "TRY",
+          "period": "month"
+        }
+      ],
+      "verifiedAt": "2026-10-28",
+      "confidence": "high",
+      "needsReview": false,
+      "note": "Eylül 2026 haberi ve bayi listesi birebir örtüşüyor. Sezonluk Süper Lig taksit sayısı kaynaklarda farklı olduğu için eklenmedi.",
+      "sources": [
+        "https://www.karar.com/guncel-haberler/super-lig-ve-dunyaca-unlu-diziler-tek-ekranda-2026-tod-tv-ucreti-ne-2074089",
+        "https://www.digiturkburada.com.tr/tod-fiyatlari.html"
+      ]
+    },
+    {
+      "id": "mubi",
+      "name": "MUBI",
+      "category": "video",
+      "plans": [
+        {
+          "id": "aylik",
+          "name": "Aylık",
+          "price": 229,
+          "currency": "TRY",
+          "period": "month"
+        },
+        {
+          "id": "yillik",
+          "name": "Yıllık",
+          "price": 1980,
+          "currency": "TRY",
+          "period": "year"
+        }
+      ],
+      "verifiedAt": "2026-10-28",
+      "confidence": "low",
+      "needsReview": true,
+      "note": "Kaynaklar çelişkili (169/1.500 TL ve 229/1.980 TL). mubi.com üyelik sayfasından Türkiye hesabıyla teyit edilmeli.",
+      "sources": [
+        "https://www.webtekno.com/mubi-uyelik-ucreti-h159218.html",
+        "https://www.karekod.org/blog/mubi-uyelik-ucreti-ne-kadar-aylik-yillik-ve-ucretsiz-mubi/"
+      ]
+    },
+    {
+      "id": "exxen",
+      "name": "Exxen",
+      "category": "video",
+      "plans": [
+        {
+          "id": "reklamli",
+          "name": "Reklamlı",
+          "price": 275,
+          "currency": "TRY",
+          "period": "month"
+        },
+        {
+          "id": "reklamsiz",
+          "name": "Reklamsız",
+          "price": 388,
+          "currency": "TRY",
+          "period": "month"
+        }
+      ],
+      "verifiedAt": "2026-10-28",
+      "confidence": "low",
+      "needsReview": true,
+      "note": "Kaynaklar çelişkili (219/309, 275/388, 270,50/381,66 TL). plan.exxen.com/tr sayfasından teyit edilmeli.",
+      "sources": [
+        "https://www.uyan32.com/exxen-uyelik-ucreti-2026-guncel-fiyatlar-paketler-ve-abone-olmaya-deger-mi",
+        "https://www.karekod.org/blog/exxen-uyelik-ucretleri-exxenspor-fiyati/"
+      ]
+    },
+    {
+      "id": "gain",
+      "name": "GAİN",
+      "category": "video",
+      "plans": [
+        {
+          "id": "aylik",
+          "name": "Aylık",
+          "price": 249,
+          "currency": "TRY",
+          "period": "month"
+        }
+      ],
+      "verifiedAt": "2026-10-28",
+      "confidence": "high",
+      "needsReview": false,
+      "note": "Resmi GAİN yardım merkezinde 249 TL/ay olarak teyit edildi.",
+      "sources": [
+        "https://destek.gain.tv/en/guncel-ucretler.html"
+      ]
+    },
+    {
+      "id": "duolingo",
+      "name": "Duolingo",
+      "category": "egitim",
+      "plans": [
+        {
+          "id": "super-aylik",
+          "name": "Super (App Store)",
+          "price": 649.49,
+          "currency": "TRY",
+          "period": "month"
+        }
+      ],
+      "verifiedAt": "2026-10-28",
+      "confidence": "low",
+      "needsReview": true,
+      "note": "Tek ikincil kaynak (App Store gözlemi, 3 Ekim 2026).",
+      "sources": [
+        "https://www.aisubdeal.com/pricing/duolingo/turkey/"
+      ]
+    }
+  ]
+}
