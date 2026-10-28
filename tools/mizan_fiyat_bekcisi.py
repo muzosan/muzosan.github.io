@@ -94,6 +94,10 @@ def extract(text: str, item: dict) -> float | None:
     item["anchor"] + item["index"]: anchor'dan sonraki 'window' karakter içindeki n'inci fiyat.
     """
     flags = re.I | re.S
+    if "pattern" in item and "nth" in item:
+        matches = list(re.finditer(item["pattern"].replace("{PRICE}", PRICE_RE), text, flags))
+        n = int(item["nth"])
+        return parse_price(matches[n].group(item.get("group", 1))) if n < len(matches) else None
     if "pattern" in item:
         m = re.search(item["pattern"].replace("{PRICE}", PRICE_RE), text, flags)
         if not m:
@@ -174,6 +178,17 @@ def main() -> int:
                 continue
 
             verified_services[sid] = False
+            # Bulunan değer aynı servisteki BAŞKA bir planın fiyatıysa, sayfada yanlış
+            # karta bakılmış demektir: asla yayınlanmaz.
+            others = {float(p["price"]) for p in service["plans"] if p["id"] != pid and p.get("currency", "TRY") == cur}
+            if any(abs(found - o) < 0.005 for o in others):
+                rows.append((sid, pid, fmt(listed, cur), fmt(found, cur), "başka planın fiyatı, yayınlanmadı"))
+                problems.append(
+                    f"- **Yanlış eşleşme:** {service['name']} {plan['name']}: sayfada bulunan {fmt(found, cur)} "
+                    f"başka bir planın fiyatı. Kaynak kuralı düzeltilmeli. {url}"
+                )
+                pending.pop(key, None)
+                continue
             ratio = found / listed if listed else 0
             if not (MIN_RATIO <= ratio <= MAX_RATIO):
                 rows.append((sid, pid, fmt(listed, cur), fmt(found, cur), "şüpheli, yayınlanmadı"))

@@ -12,7 +12,7 @@
         {
           "service": "spotify",
           "plan": "ogrenci",
-          "pattern": "Öğrenci.{0,400}?Sonra ayda\\s*₺\\s?{PRICE}"
+          "pattern": "Öğrenci(?:(?!Bireysel|Duo|Aile).){0,400}?Sonra ayda\\s*₺\\s?{PRICE}"
         },
         {
           "service": "spotify",
@@ -32,14 +32,12 @@
         {
           "service": "netflix",
           "plan": "temel",
-          "pattern": "from\\s*{PRICE}\\s*TL\\s*to\\s*\\d",
-          "group": 1
+          "pattern": "(?:Starts at|from)\\s*(?:₺|TRY)?\\s?{PRICE}\\s*(?:TL|₺|TRY)"
         },
         {
           "service": "netflix",
           "plan": "premium",
-          "pattern": "from\\s*[\\d.,]+\\s*TL\\s*to\\s*{PRICE}\\s*TL",
-          "group": 1
+          "pattern": "\\bto\\s*(?:₺|TRY)?\\s?{PRICE}\\s*(?:TL|₺|TRY)"
         }
       ]
     },
@@ -49,22 +47,26 @@
         {
           "service": "disney-plus",
           "plan": "reklamli",
-          "pattern": "Reklamlı(?:(?!Reklamsız).){0,200}?{PRICE}\\s*TL\\s*/\\s*ay"
+          "pattern": "{PRICE}\\s*TL\\s*/\\s*ay",
+          "nth": 0
         },
         {
           "service": "disney-plus",
           "plan": "reklamsiz",
-          "pattern": "Reklamsız(?:(?!Reklamlı).){0,200}?{PRICE}\\s*TL\\s*/\\s*ay"
+          "pattern": "{PRICE}\\s*TL\\s*/\\s*ay",
+          "nth": 1
         },
         {
           "service": "disney-plus",
           "plan": "reklamli-yillik",
-          "pattern": "Reklamlı(?:(?!Reklamsız).){0,300}?{PRICE}\\s*TL\\s*/\\s*yıl"
+          "pattern": "{PRICE}\\s*TL\\s*/\\s*yıl",
+          "nth": 0
         },
         {
           "service": "disney-plus",
           "plan": "reklamsiz-yillik",
-          "pattern": "Reklamsız(?:(?!Reklamlı).){0,300}?{PRICE}\\s*TL\\s*/\\s*yıl"
+          "pattern": "{PRICE}\\s*TL\\s*/\\s*yıl",
+          "nth": 1
         }
       ]
     },
@@ -84,12 +86,14 @@
         {
           "service": "hbo-max",
           "plan": "standart-yillik",
-          "pattern": "Standart(?:(?!Özel).){0,200}?₺\\s?{PRICE}\\s*/\\s*yıl"
+          "pattern": "₺?\\s?{PRICE}\\s*(?:TL)?\\s*/\\s*yıl",
+          "nth": 0
         },
         {
           "service": "hbo-max",
           "plan": "ozel-yillik",
-          "pattern": "Özel(?:(?!Standart).){0,200}?₺\\s?{PRICE}\\s*/\\s*yıl"
+          "pattern": "₺?\\s?{PRICE}\\s*(?:TL)?\\s*/\\s*yıl",
+          "nth": 1
         }
       ]
     },
@@ -229,22 +233,12 @@
       ]
     },
     {
-      "url": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
-      "plans": [
-        {
-          "service": "chatgpt",
-          "plan": "plus-web",
-          "pattern": "\\$\\s?{PRICE}\\s*(?:/|per)\\s*month"
-        }
-      ]
-    },
-    {
       "url": "https://mubi.com/tr/tr/memberships",
       "plans": [
         {
           "service": "mubi",
           "plan": "aylik",
-          "pattern": "Aylık ücret\\s*₺\\s?{PRICE}"
+          "pattern": "₺\\s?{PRICE}\\s*/\\s*ay"
         }
       ]
     }
