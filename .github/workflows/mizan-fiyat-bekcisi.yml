@@ -1,0 +1,56 @@
+name: Mizan fiyat bekçisi
+
+# Resmi fiyat sayfalarını günde iki kez kontrol eder (Türkiye saatiyle ~07:17 ve ~19:17).
+# Güvenli değişiklikleri mizan/fiyatlar.json'a yazar ve yayınlar; uygulamalar bir sonraki
+# açılışta yeni fiyatları alır. Sorun görürse "kontrol gerekli" başlıklı bir issue açar.
+on:
+  schedule:
+    - cron: '17 4 * * *'
+    - cron: '17 16 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: mizan-fiyat-bekcisi
+  cancel-in-progress: false
+
+jobs:
+  kontrol:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Resmi fiyat sayfalarını kontrol et
+        run: python tools/mizan_fiyat_bekcisi.py
+
+      - name: Değişiklik varsa yayınla
+        run: |
+          if [ -n "$(git status --porcelain mizan/)" ]; then
+            git config user.name "mizan-fiyat-bekcisi"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add mizan/fiyatlar.json mizan/bekci_durum.json
+            git commit -m "Mizan fiyat listesi: otomatik kontrol"
+            git pull --rebase
+            git push
+          fi
+
+      - name: Sorun varsa bildir
+        if: hashFiles('bekci_sorun.md') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TITLE="Mizan fiyat bekçisi: kontrol gerekli"
+          NUM=$(gh issue list --state open --search "in:title \"$TITLE\"" --json number --jq '.[0].number // empty')
+          if [ -n "$NUM" ]; then
+            gh issue comment "$NUM" --body-file bekci_sorun.md
+          else
+            gh issue create --title "$TITLE" --body-file bekci_sorun.md
+          fi

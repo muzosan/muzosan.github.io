@@ -1,0 +1,252 @@
+{
+  "_aciklama": "Mizan fiyat bekçisinin kontrol ettiği resmi sayfalar. pattern içindeki {PRICE} fiyatı yakalar. anchor+index: anchor'dan sonraki n'inci fiyat (0'dan başlar).",
+  "checks": [
+    {
+      "url": "https://www.spotify.com/tr-tr/premium/",
+      "plans": [
+        {
+          "service": "spotify",
+          "plan": "bireysel",
+          "pattern": "Sonra ayda\\s*₺\\s?{PRICE}"
+        },
+        {
+          "service": "spotify",
+          "plan": "ogrenci",
+          "pattern": "Öğrenci.{0,400}?Sonra ayda\\s*₺\\s?{PRICE}"
+        },
+        {
+          "service": "spotify",
+          "plan": "duo",
+          "pattern": "Duo(?:(?!Aile).){0,200}?₺\\s?{PRICE}\\s*/\\s*ay"
+        },
+        {
+          "service": "spotify",
+          "plan": "aile",
+          "pattern": "Aile(?:(?!Duo).){0,200}?₺\\s?{PRICE}\\s*/\\s*ay"
+        }
+      ]
+    },
+    {
+      "url": "https://www.netflix.com/tr-en/",
+      "plans": [
+        {
+          "service": "netflix",
+          "plan": "temel",
+          "pattern": "from\\s*{PRICE}\\s*TL\\s*to\\s*\\d",
+          "group": 1
+        },
+        {
+          "service": "netflix",
+          "plan": "premium",
+          "pattern": "from\\s*[\\d.,]+\\s*TL\\s*to\\s*{PRICE}\\s*TL",
+          "group": 1
+        }
+      ]
+    },
+    {
+      "url": "https://www.disneyplus.com/tr-tr",
+      "plans": [
+        {
+          "service": "disney-plus",
+          "plan": "reklamli",
+          "pattern": "Reklamlı(?:(?!Reklamsız).){0,200}?{PRICE}\\s*TL\\s*/\\s*ay"
+        },
+        {
+          "service": "disney-plus",
+          "plan": "reklamsiz",
+          "pattern": "Reklamsız(?:(?!Reklamlı).){0,200}?{PRICE}\\s*TL\\s*/\\s*ay"
+        },
+        {
+          "service": "disney-plus",
+          "plan": "reklamli-yillik",
+          "pattern": "Reklamlı(?:(?!Reklamsız).){0,300}?{PRICE}\\s*TL\\s*/\\s*yıl"
+        },
+        {
+          "service": "disney-plus",
+          "plan": "reklamsiz-yillik",
+          "pattern": "Reklamsız(?:(?!Reklamlı).){0,300}?{PRICE}\\s*TL\\s*/\\s*yıl"
+        }
+      ]
+    },
+    {
+      "url": "https://www.hbomax.com/tr/tr",
+      "plans": [
+        {
+          "service": "hbo-max",
+          "plan": "standart",
+          "pattern": "Standart(?:(?!Özel).){0,200}?₺\\s?{PRICE}\\s*/\\s*ay"
+        },
+        {
+          "service": "hbo-max",
+          "plan": "ozel",
+          "pattern": "Özel(?:(?!Standart).){0,200}?₺\\s?{PRICE}\\s*/\\s*ay"
+        },
+        {
+          "service": "hbo-max",
+          "plan": "standart-yillik",
+          "pattern": "Standart(?:(?!Özel).){0,200}?₺\\s?{PRICE}\\s*/\\s*yıl"
+        },
+        {
+          "service": "hbo-max",
+          "plan": "ozel-yillik",
+          "pattern": "Özel(?:(?!Standart).){0,200}?₺\\s?{PRICE}\\s*/\\s*yıl"
+        }
+      ]
+    },
+    {
+      "url": "https://www.xbox.com/tr-TR/games/store/xbox-game-pass-ultimate/CFQ7TTC0KHS0",
+      "plans": [
+        {
+          "service": "xbox-game-pass",
+          "plan": "ultimate",
+          "pattern": "{PRICE}\\s*₺\\s*/\\s*ay"
+        }
+      ]
+    },
+    {
+      "url": "https://www.xbox.com/tr-TR/games/store/game-pass/CFQ7TTC0KGQ8",
+      "plans": [
+        {
+          "service": "xbox-game-pass",
+          "plan": "pc",
+          "pattern": "{PRICE}\\s*₺\\s*/\\s*ay"
+        }
+      ]
+    },
+    {
+      "url": "https://www.xbox.com/tr-TR/games/store/xbox-live-gold/CFQ7TTC0K5DJ/000D",
+      "plans": [
+        {
+          "service": "xbox-game-pass",
+          "plan": "essential",
+          "pattern": "{PRICE}\\s*₺\\s*/\\s*ay"
+        }
+      ]
+    },
+    {
+      "url": "https://www.xbox.com/tr-TR/games/store/game-pass-premium/CFQ7TTC0P85B",
+      "plans": [
+        {
+          "service": "xbox-game-pass",
+          "plan": "premium",
+          "pattern": "{PRICE}\\s*₺\\s*/\\s*ay"
+        }
+      ]
+    },
+    {
+      "url": "https://www.microsoft.com/tr-tr/microsoft-365/p/microsoft-365-personal/cfq7ttc0k5bf",
+      "plans": [
+        {
+          "service": "microsoft-365",
+          "plan": "bireysel",
+          "pattern": "₺\\s?{PRICE}\\s*/\\s*ay"
+        },
+        {
+          "service": "microsoft-365",
+          "plan": "bireysel-yillik",
+          "pattern": "₺\\s?{PRICE}\\s*/\\s*yıl"
+        }
+      ]
+    },
+    {
+      "url": "https://www.microsoft.com/tr-tr/microsoft-365/p/microsoft-365-family/cfq7ttc0k5dm",
+      "plans": [
+        {
+          "service": "microsoft-365",
+          "plan": "aile",
+          "pattern": "₺\\s?{PRICE}\\s*/\\s*ay"
+        },
+        {
+          "service": "microsoft-365",
+          "plan": "aile-yillik",
+          "pattern": "₺\\s?{PRICE}\\s*/\\s*yıl"
+        }
+      ]
+    },
+    {
+      "url": "https://support.apple.com/en-us/108047",
+      "plans": [
+        {
+          "service": "icloud-plus",
+          "plan": "50gb",
+          "anchor": "T(?:ürkiye|urkiye|urkey)",
+          "index": 0,
+          "window": 500
+        },
+        {
+          "service": "icloud-plus",
+          "plan": "200gb",
+          "anchor": "T(?:ürkiye|urkiye|urkey)",
+          "index": 1,
+          "window": 500
+        },
+        {
+          "service": "icloud-plus",
+          "plan": "2tb",
+          "anchor": "T(?:ürkiye|urkiye|urkey)",
+          "index": 2,
+          "window": 500
+        },
+        {
+          "service": "icloud-plus",
+          "plan": "6tb",
+          "anchor": "T(?:ürkiye|urkiye|urkey)",
+          "index": 3,
+          "window": 500
+        },
+        {
+          "service": "icloud-plus",
+          "plan": "12tb",
+          "anchor": "T(?:ürkiye|urkiye|urkey)",
+          "index": 4,
+          "window": 500
+        }
+      ]
+    },
+    {
+      "url": "https://destek.gain.tv/en/guncel-ucretler.html",
+      "plans": [
+        {
+          "service": "gain",
+          "plan": "aylik",
+          "pattern": "{PRICE}\\s*(?:TL|₺)"
+        }
+      ]
+    },
+    {
+      "url": "https://claude.com/pricing",
+      "plans": [
+        {
+          "service": "claude",
+          "plan": "pro-web",
+          "pattern": "\\$\\s?{PRICE}\\s*if billed monthly"
+        },
+        {
+          "service": "claude",
+          "plan": "pro-web-yillik",
+          "pattern": "\\$\\s?{PRICE}\\s*billed up front"
+        }
+      ]
+    },
+    {
+      "url": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+      "plans": [
+        {
+          "service": "chatgpt",
+          "plan": "plus-web",
+          "pattern": "\\$\\s?{PRICE}\\s*(?:/|per)\\s*month"
+        }
+      ]
+    },
+    {
+      "url": "https://mubi.com/tr/tr/memberships",
+      "plans": [
+        {
+          "service": "mubi",
+          "plan": "aylik",
+          "pattern": "Aylık ücret\\s*₺\\s?{PRICE}"
+        }
+      ]
+    }
+  ]
+}
