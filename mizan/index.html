@@ -6,6 +6,8 @@
 <title>Mizan · Abonelik Takibi · MUON Studio</title>
 <meta name="description" content="Mizan ile aboneliklerini tek ekranda takip et. Yenileme hatırlatıcısı, zam radarı, dövizli abonelikler. Reklamsız, hesapsız. MUON Studio.">
 <meta name="theme-color" content="#0B0B0D">
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
 <meta property="og:title" content="Mizan · Abonelik Takibi">
 <meta property="og:description" content="Her ay neye, ne kadar ödediğini tek bakışta gör. Reklamsız, hesapsız.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,7 +63,8 @@
   .list li span:last-child { color: var(--muted); }
   .apps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
   .app { display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; color: var(--muted); font-size: 13px; }
-  .mono-tile { width: 64px; height: 64px; border-radius: 20px; background: var(--surf2); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 32px; color: var(--text); }
+  .app-icon { width: 72px; height: 72px; border-radius: 20px; object-fit: cover; display: block; box-shadow: 0 10px 24px rgba(0,0,0,.4); }
+  .app:hover { color: var(--text); text-decoration: none; }
   .cta { display: inline-flex; align-items: center; height: 48px; padding: 0 22px; border-radius: 24px; background: var(--acc); color: var(--acc-ink); font-weight: 600; }
   .cta:hover { text-decoration: none; opacity: .9; }
   footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; }
@@ -79,7 +82,7 @@
 <body>
 <div class="wrap">
   <header>
-    <a class="brand" href="./">Mizan</a>
+    <a class="brand" href="./" style="display:flex;align-items:center;gap:10px"><img src="icon.png" alt="" width="34" height="34" style="border-radius:9px">Mizan</a>
     <nav>
       <a href="#ozellikler">Özellikler</a>
       <a href="gizlilik.html">Gizlilik</a>
@@ -163,11 +166,11 @@
     <span class="mono">MUON Studio</span>
     <h2>Diğer uygulamalarımız</h2>
     <div class="apps">
-      <div class="app"><div class="mono-tile">H</div>Hane</div>
-      <div class="app"><div class="mono-tile">V</div>Volea</div>
-      <div class="app"><div class="mono-tile">B</div>Bluff</div>
-      <div class="app"><div class="mono-tile">Ç</div>Çaycı Usta</div>
-      <div class="app"><div class="mono-tile">D</div>Dolmuş Çıkmazı</div>
+      <a class="app" href="https://play.google.com/store/apps/details?id=com.muaz.bluff"><img class="app-icon" src="../logos/bluff.png" alt="">Bluff</a>
+      <a class="app" href="https://play.google.com/store/apps/details?id=com.muonstudio.volea"><img class="app-icon" src="../logos/volea.png" alt="">Volea</a>
+      <a class="app" href="../cayci_usta/"><img class="app-icon" src="../cayci_usta/icon.png" alt="">Çaycı Usta</a>
+      <a class="app" href="../dolmus-cikmazi/"><img class="app-icon" src="../dolmus-cikmazi/icon.png" alt="">Dolmuş Çıkmazı</a>
+      <a class="app" href="../hane/"><img class="app-icon" src="../logos/hane.png" alt="">Hane</a>
     </div>
     <p style="margin-top:28px"><a class="cta" href="https://instagram.com/muonstudio.dev">Instagram'da takip et · @muonstudio.dev</a></p>
   </section>
