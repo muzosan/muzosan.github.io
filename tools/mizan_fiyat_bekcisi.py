@@ -212,6 +212,23 @@ def main() -> int:
                 pending[key] = {"price": found, "first_seen": today, "run": run_id}
                 rows.append((sid, pid, fmt(listed, cur), fmt(found, cur), "değişti, 2. kontrol bekleniyor"))
 
+    # Bir serviste fiyat değiştiyse, otomatik kontrol edilemeyen diğer planları elle bakılsın diye bildir.
+    checked = {(it["service"], it["plan"]) for src in sources["checks"] for it in src["plans"]}
+    changed_services = {key.split("/")[0] for key in pending} | {
+        sid for sid in services if any(c.startswith(services[sid]["name"] + " ") for c in changed)
+    }
+    for sid in sorted(changed_services):
+        s = services.get(sid)
+        if not s:
+            continue
+        unchecked = [p["name"] for p in s["plans"] if (sid, p["id"]) not in checked and not p.get("needsReview")]
+        if unchecked:
+            problems.append(
+                f"- **Elle kontrol:** {s['name']} fiyatı değişiyor; otomatik okunamayan planlar: "
+                + ", ".join(unchecked)
+                + (f" ({s['officialUrl']})" if s.get("officialUrl") else "")
+            )
+
     # Tüm planları doğru çıkan servislerin doğrulama tarihi haftada bir yenilenir.
     refreshed = []
     for sid, ok in verified_services.items():

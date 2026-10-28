@@ -27,21 +27,6 @@
       ]
     },
     {
-      "url": "https://www.netflix.com/tr-en/",
-      "plans": [
-        {
-          "service": "netflix",
-          "plan": "temel",
-          "pattern": "(?:Starts at|from)\\s*(?:₺|TRY)?\\s?{PRICE}\\s*(?:TL|₺|TRY)"
-        },
-        {
-          "service": "netflix",
-          "plan": "premium",
-          "pattern": "\\bto\\s*(?:₺|TRY)?\\s?{PRICE}\\s*(?:TL|₺|TRY)"
-        }
-      ]
-    },
-    {
       "url": "https://www.disneyplus.com/tr-tr",
       "plans": [
         {
@@ -82,18 +67,6 @@
           "service": "hbo-max",
           "plan": "ozel",
           "pattern": "Özel(?:(?!Standart).){0,200}?₺\\s?{PRICE}\\s*/\\s*ay"
-        },
-        {
-          "service": "hbo-max",
-          "plan": "standart-yillik",
-          "pattern": "₺?\\s?{PRICE}\\s*(?:TL)?\\s*/\\s*yıl",
-          "nth": 0
-        },
-        {
-          "service": "hbo-max",
-          "plan": "ozel-yillik",
-          "pattern": "₺?\\s?{PRICE}\\s*(?:TL)?\\s*/\\s*yıl",
-          "nth": 1
         }
       ]
     },
@@ -231,16 +204,7 @@
           "pattern": "\\$\\s?{PRICE}\\s*billed up front"
         }
       ]
-    },
-    {
-      "url": "https://mubi.com/tr/tr/memberships",
-      "plans": [
-        {
-          "service": "mubi",
-          "plan": "aylik",
-          "pattern": "₺\\s?{PRICE}\\s*/\\s*ay"
-        }
-      ]
     }
-  ]
+  ],
+  "_not": "Netflix, MUBI ve HBO Max yıllık fiyatları sayfada tarayıcıda yükleniyor; GitHub sunucusundan okunamadığı için listede yok. Aynı servisin başka planı değişirse bekçi bunları elle kontrol için bildirir."
 }
