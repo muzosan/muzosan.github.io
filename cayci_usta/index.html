@@ -59,6 +59,15 @@
   footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 24px 0 40px; color: var(--muted);
            font-size: .92rem; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
   html:not([lang="en"]) [data-en], html[lang="en"] [data-tr] { display: none !important; }
+  .places { padding: 0 0 40px; }
+  .places .lead { color: var(--muted); margin: -8px 0 18px; }
+  .pgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .pgrid figure { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; }
+  .pgrid img { display: block; width: 100%; aspect-ratio: 5 / 4; object-fit: cover; }
+  .pgrid figcaption { padding: 10px 14px 14px; color: var(--muted); font-size: .92rem; }
+  .pgrid figcaption b { display: block; color: var(--ink); font-size: 1rem; margin-bottom: 2px; }
+  @media (max-width: 760px) { .pgrid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 460px) { .pgrid { grid-template-columns: 1fr; } }
   @media (max-width: 760px) {
     .hero { grid-template-columns: 1fr; padding-bottom: 32px; }
     .hero-shot { width: min(300px, 90%); }
@@ -99,10 +108,10 @@
     <div class="f"><h3 data-tr>☕ Demle, servis et, büyü</h3><h3 data-en>☕ Brew, serve, grow</h3>
       <p data-tr>Müşterileri bekletmeden servis yap, kombo zincirle, tezgâhını yükselt.</p>
       <p data-en>Serve before customers lose patience, chain combos and upgrade your counter.</p></div>
-    <div class="f"><h3 data-tr>🏛️ İki mekân, sekiz lezzet</h3><h3 data-en>🏛️ Two places, eight flavors</h3>
-      <p data-tr>Mahalle Çay Ocağı ve vapur manzaralı İskele Kıraathanesi.</p>
-      <p data-en>The Neighborhood Tea House and the Pier Coffeehouse with ferries outside.</p></div>
-    <div class="f"><h3 data-tr>⭐ 13 efsane usta</h3><h3 data-en>⭐ 13 legendary masters</h3>
+    <div class="f"><h3 data-tr>🏛️ Yedi mekân, 28 lezzet</h3><h3 data-en>🏛️ Seven places, 28 flavors</h3>
+      <p data-tr>Mahalle çay ocağından Boğaz yalısına: çarşı lokantası, Ortaköy sahili, ocakbaşı ve Galata tatlıcısı.</p>
+      <p data-en>From a neighborhood tea house to a Bosphorus mansion, via a bazaar eatery, Ortaköy seaside, a grill house and a Galata sweet shop.</p></div>
+    <div class="f"><h3 data-tr>⭐ 28 usta</h3><h3 data-en>⭐ 28 masters</h3>
       <p data-tr>Sandık aç, ustaları yerleştir, yıldızlarını yükselt.</p>
       <p data-en>Open chests, assign masters and raise their stars.</p></div>
     <div class="f"><h3 data-tr>🧑‍🍳 Sen yokken de kazan</h3><h3 data-en>🧑‍🍳 Earn while you're away</h3>
@@ -114,6 +123,19 @@
     <div class="f"><h3 data-tr>🎵 Sıcacık atmosfer</h3><h3 data-en>🎵 Cozy atmosphere</h3>
       <p data-tr>Çini desenleri, pirinç lambalar ve hicaz makamında saz müziği.</p>
       <p data-en>Tile patterns, brass lamps and an original saz soundtrack.</p></div>
+  </section>
+
+  <section class="places">
+    <h2 data-tr>Yeni: 5 mekân</h2><h2 data-en>New: 5 places</h2>
+    <p class="lead" data-tr>1.1 güncellemesiyle çay ocağın büyüyor. Her mekânın kendi menüsü, ustaları ve sesi var.</p>
+    <p class="lead" data-en>Update 1.1 grows your tea house. Every place has its own menu, masters and soundscape.</p>
+    <div class="pgrid">
+      <figure><img src="mekan_carsi.jpg" alt="" loading="lazy"><figcaption data-tr><b>Çarşı Lokantası</b> Mercimek çorbası, fasulye pilav, karnıyarık, fırın sütlaç</figcaption><figcaption data-en><b>Bazaar Eatery</b> Lentil soup, rice &amp; beans, stuffed eggplant, rice pudding</figcaption></figure>
+      <figure><img src="mekan_sahil.jpg" alt="" loading="lazy"><figcaption data-tr><b>Ortaköy Sahili</b> Midye dolma, balık ekmek, kumpir, waffle</figcaption><figcaption data-en><b>Ortaköy Seaside</b> Stuffed mussels, fish sandwich, kumpir, waffle</figcaption></figure>
+      <figure><img src="mekan_ocakbasi.jpg" alt="" loading="lazy"><figcaption data-tr><b>Ocakbaşı Kebapçısı</b> Lahmacun, Adana kebap, İskender, künefe</figcaption><figcaption data-en><b>Charcoal Grill House</b> Lahmacun, Adana kebab, Iskender, künefe</figcaption></figure>
+      <figure><img src="mekan_tatlici.jpg" alt="" loading="lazy"><figcaption data-tr><b>Galata Tatlıcısı</b> Baklava, kazandibi, Maraş dondurması, lokum</figcaption><figcaption data-en><b>Galata Sweet Shop</b> Baklava, kazandibi, Maraş ice cream, Turkish delight</figcaption></figure>
+      <figure><img src="mekan_yali.jpg" alt="" loading="lazy"><figcaption data-tr><b>Boğaz Yalısı</b> Gül şerbeti, hünkâr beğendi, kuzu tandır, saray lokması</figcaption><figcaption data-en><b>Bosphorus Mansion</b> Rose sherbet, sultan's delight, lamb tandır, palace lokma</figcaption></figure>
+    </div>
   </section>
 
   <section>
