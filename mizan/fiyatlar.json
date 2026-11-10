@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "listVersion": "2026-11-04.1",
-  "updatedAt": "2026-11-04T00:47:19+03:00",
+  "listVersion": "2026-11-11.1",
+  "updatedAt": "2026-11-11T00:49:35+03:00",
   "baseCurrency": "TRY",
   "notes": "Fiyatlar aylık ve KDV dahil tüketici fiyatlarıdır. needsReview=true olan kayıtlar uygulamada gösterilmeden önce resmi siteden teyit edilmelidir. Uygulama bu dosyayı açılışta çeker; listVersion değiştiyse yerel kataloğu günceller ve previousPrice farkı olan kayıtlar için zam/indirim bildirimi üretir.",
   "fx": {
@@ -96,7 +96,7 @@
           "seats": 6
         }
       ],
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-11",
       "confidence": "high",
       "needsReview": false,
       "sources": [
@@ -272,7 +272,7 @@
           "period": "year"
         }
       ],
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-11",
       "confidence": "high",
       "needsReview": false,
       "sources": [
@@ -393,7 +393,7 @@
           "changedAt": "2026-07-18"
         }
       ],
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-11",
       "confidence": "high",
       "needsReview": false,
       "sources": [
@@ -579,7 +579,7 @@
           "verification": "haber"
         }
       ],
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-11",
       "confidence": "high",
       "needsReview": false,
       "sources": [
@@ -624,7 +624,7 @@
           "seats": 6
         }
       ],
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-11",
       "confidence": "high",
       "needsReview": false,
       "sources": [
@@ -762,7 +762,7 @@
           "changedAt": "2026-04-21"
         }
       ],
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-11",
       "confidence": "high",
       "needsReview": false,
       "sources": [
@@ -942,7 +942,7 @@
           "period": "month"
         }
       ],
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-11",
       "confidence": "high",
       "needsReview": false,
       "note": "Resmi GAİN yardım merkezinde 249 TL/ay olarak teyit edildi.",
